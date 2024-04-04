@@ -65,13 +65,17 @@ async function rezervisi(e){
                  const response = await fetch(`https://joris.testmaster.fon.bg.ac.rs/api/hoteli/${hotelid}`);
                  const detaljiHotela = await response.json();
                  
-                 let red = tabela.insertRow()
-                 let polje1 = red.insertCell(0)
-                 let polje2 = red.insertCell(1)
-                 let polje3 = red.insertCell(2)
-                 let polje4 = red.insertCell(3)
+                 let red = tabela.insertRow(1)
+                 let polje1 = red.insertCell()
+                 let polje2 = red.insertCell()
+                 let polje3 = red.insertCell()
+                 let polje4 = red.insertCell()
                  polje1.innerHTML = detaljiHotela.naziv
-                 polje2.innerHTML = detaljiHotela.sobe[sobaid].naziv
+                 detaljiHotela.sobe.forEach(soba => {
+                    if (soba.id == sobaid) {
+                        polje2.innerHTML = soba.naziv
+                    }
+                 });
                  polje3.innerHTML = datumod
                  polje4.innerHTML = datumdo
                  }
