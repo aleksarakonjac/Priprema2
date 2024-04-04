@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rezervacija smestaja</title>
+</head>
+<body>
+    <div id="naslov">
+        <h1>Rezervacija smestaja</h1>
+    </div>
+    <div id="cela-forma">
+    <form>
+        <div id="forma-1">
+        <div class="forma-kolona">
+            <div class="forma-stavka">
+                <label for="hotel">Hotel</label>
+                <select name="hotel" id="hoteli">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="forma-stavka">
+                <label for="soba">Soba</label>
+                <select name="soba" id="sobe">
+                    
+                </select>
+            </div>
+            <label for="dodatneopcije">Dodatne opcije</label>
+            <div id="div-opcije">
+                <input type="checkbox" value="dorucak" id="dorucak" class="obroci">
+                <label for="dorucak">Dorucak</label>
+                <br>
+                <input type="checkbox" value="rucak" id="rucak" class="obroci">
+                <label for="rucak">Rucak</label>
+                <br>
+                <input type="checkbox" value="vecera" id="vecera" class="obroci">
+                <label for="vecera">Vecera</label>
+            </div>
+        </div>
+        <div class="forma-kolona" id="kolona-leva">
+            <div class="forma-stavka">
+                <label for="datumod">Datum od</label>
+                <input type="date" name="datumod" id="datumod">
+            </div>
+            <div class="forma-stavka">
+                <label for="datumdo">Datum do</label>
+                <input type="date" name="datumdo" id="datumdo">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="forma-2">
+        <div class="forma-stavka">
+            <label for="napomena">Napomena</label>
+            <textarea name="napomena" id="napomena" cols="50" rows="10"></textarea>
+        </div>
+        <button id="btn-rezervisi">Rezervisi</button>
+    </div>
+    </form>
+    <p id="poruka"></p>
+    </div>
+    <div id="naslov2">
+        <h2>Rezervacije</h2>
+    </div>
+    <div id="tabeladiv">
+        <table id="tabela" border="2px solid black">
+            <thead><tr>
+                <th>Hotel</th>
+                <th>Sobe</th>
+                <th>Datum od</th>
+                <th>Datum do</th>
+            </tr></thead>
+            <tbody>
+
+            </tbody>
+            
+        </table>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
